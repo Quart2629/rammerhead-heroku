@@ -30,6 +30,9 @@ module.exports = {
 
     // restrict sessions to be only used per IP
     restrictSessionToIP: false,
+    
+    // Xframe
+    X-Frame-Options: SAMEORIGIN
 
     //// REWRITE HEADER CONFIGURATION ////
 
