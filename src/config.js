@@ -31,8 +31,7 @@ module.exports = {
     // restrict sessions to be only used per IP
     restrictSessionToIP: false,
     
-    // Xframe
-    X-Frame-Options: SAMEORIGIN
+    
 
     //// REWRITE HEADER CONFIGURATION ////
 
@@ -41,11 +40,11 @@ module.exports = {
     // stripClientHeaders: ['cf-ipcountry', 'cf-ray', 'x-forwarded-proto', 'cf-visitor', 'cf-connecting-ip', 'cdn-loop', 'x-forwarded-for'],
     stripClientHeaders: [],
     // if you want to modify response headers, like removing the x-frame-options header, do it like so:
-    // rewriteServerHeaders: {
-    //     // you can also specify a function to modify/add the header using the original value (undefined if adding the header)
-    //     // 'x-frame-options': (originalHeaderValue) => '',
-    //     'x-frame-options': null, // set to null to tell rammerhead that you want to delete it
-    // },
+     rewriteServerHeaders: {
+         // you can also specify a function to modify/add the header using the original value (undefined if adding the header)
+        // 'x-frame-options': (originalHeaderValue) => '',
+         'x-frame-options': null, // set to null to tell rammerhead that you want to delete it
+     },
     rewriteServerHeaders: {},
 
     //// SESSION STORE CONFIG ////
