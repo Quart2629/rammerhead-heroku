@@ -46,7 +46,7 @@ module.exports = {
          //'x-frame-options': null, // set to null to tell rammerhead that you want to delete it
      },
     rewriteServerHeaders: {
-    Response.AddHeader("X-Frame-Options", "AllowAll");
+        'x-frame-options': (originalHeaderValue) => 'AllowAll',
     },
     
     
