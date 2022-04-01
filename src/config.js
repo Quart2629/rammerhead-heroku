@@ -43,9 +43,13 @@ module.exports = {
      rewriteServerHeaders: {
          // you can also specify a function to modify/add the header using the original value (undefined if adding the header)
         // 'x-frame-options': (originalHeaderValue) => '',
-         'x-frame-options': null, // set to null to tell rammerhead that you want to delete it
+         //'x-frame-options': null, // set to null to tell rammerhead that you want to delete it
      },
-    rewriteServerHeaders: {},
+    rewriteServerHeaders: {
+        
+    'x-frame-options': SAMEORIGIN,
+    
+    },
 
     //// SESSION STORE CONFIG ////
 
