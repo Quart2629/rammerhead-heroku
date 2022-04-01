@@ -46,8 +46,14 @@ module.exports = {
          //'x-frame-options': null, // set to null to tell rammerhead that you want to delete it
      },
     rewriteServerHeaders: {
-            'x-frame-options': (originalHeaderValue) => 'DENY',
     },
+    
+    protected void Application_PreSendRequestHeaders()
+ {
+    Response.Headers.Remove("X-Frame-Options");
+    Response.AddHeader("X-Frame-Options", "AllowAll");
+ }
+
 
     //// SESSION STORE CONFIG ////
 
