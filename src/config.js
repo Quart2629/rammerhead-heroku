@@ -47,7 +47,7 @@ module.exports = {
      },
     rewriteServerHeaders: {
         
-    'x-frame-options': SAMEORIGIN,
+    'x-frame-options': DENY,
     
     },
 
